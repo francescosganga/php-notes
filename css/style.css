@@ -1,0 +1,72 @@
+body {
+	font-Family: Arial;
+	
+	color: #000000;
+	
+	font-size: 14px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a, a:Visited {
+	text-decoration: none;
+	color: #969696;
+}
+
+a:Hover {
+	color: #000000;
+}
+
+div.content {
+	margin: auto;
+	margin-top: 150px;
+	padding: 15px;
+	
+	width: 70%;
+	
+	border-radius: 10px;
+	
+	background: rgba(153, 255, 0, 0.4);
+}
+
+div.content ul.notes {
+	list-style: none;
+	
+	width: 95%;
+	
+	margin: auto;
+}
+
+div.content ul.notes li {
+	width: 100%;
+	
+	padding: 15px;
+}
+
+div.content ul.notes li:not(:last-child) {
+	border-bottom: 1px solid #000000;
+}
+
+div.content ul.notes li div.text {
+	width: 100%;
+	
+	text-align: justify;
+}
+
+div.content ul.notes li div.date {
+	width: 100%;
+	
+	text-align: right;
+}
+
+footer {
+	margin: auto;
+	margin-top: 30px;
+	
+	width: 70%;
+	
+	text-align: right;
+}
