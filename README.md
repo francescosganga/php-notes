@@ -2,9 +2,9 @@
 Simple PHP scripts for save notes.
 
 # How to use
-Configure mysql.inc.php (don't create database)
-Run http://localhost/install.php
-For database erasing run http://localhost/erase.php
+Configure mysql.inc.php (don't create the database)<br />
+Run http://localhost/install.php<br />
+For database erasing, run http://localhost/erase.php<br />
 
 # CHANGELOG
 	first-version
