@@ -5,21 +5,20 @@
 		or die($connection->connect_errno);
 	$result .= "connected to {$MySQL[0]}.\n";
 	$query = $connection->query("CREATE DATABASE {$MySQL[3]}")
-		or _error("database '{$MySQL[3]}' already exists.\n");
+		or _error("database '{$MySQL[3]}' not created.", $connection->error);
 	if(!$error)
 		$result .= "database '{$MySQL[3]}' created";
 	$connection->select_db($MySQL[3])
-		or _error("database '{$MySQL[3]}' doesn't exist\n");
+		or _error("can't database '{$MySQL[3]}'", $connection->error);
 	if(!$error)
 		$result .= "database '{$MySQL[3]}' selected\n";
 	$query = $connection->query("CREATE TABLE notes (id INT(5) NOT NULL AUTO_INCREMENT, text TEXT, date VARCHAR(255), PRIMARY KEY(id));")
-		or _error("error during creating 'notes' table: " . $query->error . "\n");
+		or _error("error during creating 'notes' table", $connection->error);
 	if(!$error)
 		$result .= "table '{$MySQL[3]}' created\n";
 	$query = $connection->query("INSERT INTO notes (text, date) VALUE ('This is a simple note!', '17:07 @ 04-06-2015');")
-		or _error("error during creating example note: " + $query->error . "\n");
+		or _error("error during creating example note", $connection->error);
 	if(!$error)
 		$result .= "example note created\n";
-	
 	print _result($result);
 ?>

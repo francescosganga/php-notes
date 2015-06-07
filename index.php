@@ -11,7 +11,7 @@
 	include("mysql.inc.php");
 	$connection = new MySQLi($MySQL[0], $MySQL[1], $MySQL[2], $MySQL[3])
 		or die($connection->connect_errno);
-	$result = $connection->query("SELECT * FROM notes ORDER BY id ASC");
+	$result = $connection->query("SELECT * FROM notes ORDER BY id DESC");
 	$Notes = Array();
 	while($row = $result->fetch_array(MYSQLI_ASSOC)) {
 		$Notes[$row['id']] = Array(

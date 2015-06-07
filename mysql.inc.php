@@ -9,11 +9,11 @@
 	$result = "";
 	$error = "";
 	
-	function _error($err) {
+	function _error($err, $mysql_error) {
 		global $result; global $error;
 		
 		$error = true;
-		$result .= $err;
+		$result .= "{$err} ({$mysql_error})\n";
 	}
 	
 	function _result($res) {
