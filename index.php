@@ -37,6 +37,9 @@
 	</head>
 	<body>
 		<div class="content">
+			<div style="text-align: right; width: 100%;">
+				<a href="insert.php">INSERT NOTE</a>
+			</div>
 			<ul class="notes">
 				<?php
 				foreach($Notes as $Note) {

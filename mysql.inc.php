@@ -6,6 +6,8 @@
 		'php_notes'
 	);
 	
+	$password = "testpw";
+	
 	$result = "";
 	$error = "";
 	
